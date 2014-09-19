@@ -1,5 +1,240 @@
-{"HighwayData":[
-    {"route":"", "lastName":"Doe"},
-    {"route":"Anna", "lastName":"Smith"},
-    {"route":"Peter", "lastName":"Jones"}
-]}
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "Methuen",
+               "short_name" : "Methuen",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Essex County",
+               "short_name" : "Essex County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Massachusetts",
+               "short_name" : "MA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Methuen, MA, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 42.794289,
+                  "lng" : -71.1156029
+               },
+               "southwest" : {
+                  "lat" : 42.669491,
+                  "lng" : -71.2559541
+               }
+            },
+            "location" : {
+               "lat" : 42.7262016,
+               "lng" : -71.1908924
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.794289,
+                  "lng" : -71.1156029
+               },
+               "southwest" : {
+                  "lat" : 42.669491,
+                  "lng" : -71.2559541
+               }
+            }
+         },
+         "types" : [ "locality", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "01844",
+               "short_name" : "01844",
+               "types" : [ "postal_code" ]
+            },
+            {
+               "long_name" : "Methuen",
+               "short_name" : "Methuen",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Massachusetts",
+               "short_name" : "MA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Methuen, MA 01844, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 42.79424789999999,
+                  "lng" : -71.1156029
+               },
+               "southwest" : {
+                  "lat" : 42.669491,
+                  "lng" : -71.255185
+               }
+            },
+            "location" : {
+               "lat" : 42.7276358,
+               "lng" : -71.20426189999999
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.79424789999999,
+                  "lng" : -71.1156029
+               },
+               "southwest" : {
+                  "lat" : 42.669491,
+                  "lng" : -71.255185
+               }
+            }
+         },
+         "types" : [ "postal_code" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Essex County",
+               "short_name" : "Essex County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Massachusetts",
+               "short_name" : "MA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Essex County, MA, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 42.88679,
+                  "lng" : -70.5672467
+               },
+               "southwest" : {
+                  "lat" : 42.41421020000001,
+                  "lng" : -71.25610309999999
+               }
+            },
+            "location" : {
+               "lat" : 42.7051144,
+               "lng" : -70.90712359999999
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.88679,
+                  "lng" : -70.5672467
+               },
+               "southwest" : {
+                  "lat" : 42.41421020000001,
+                  "lng" : -71.25610309999999
+               }
+            }
+         },
+         "types" : [ "administrative_area_level_2", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "Massachusetts",
+               "short_name" : "MA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Massachusetts, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 42.88679,
+                  "lng" : -69.9279921
+               },
+               "southwest" : {
+                  "lat" : 41.2390448,
+                  "lng" : -73.5081419
+               }
+            },
+            "location" : {
+               "lat" : 42.4072107,
+               "lng" : -71.3824374
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.88679,
+                  "lng" : -69.9279921
+               },
+               "southwest" : {
+                  "lat" : 41.2390897,
+                  "lng" : -73.5081419
+               }
+            }
+         },
+         "types" : [ "administrative_area_level_1", "political" ]
+      },
+      {
+         "address_components" : [
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "United States",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 71.389888,
+                  "lng" : -66.94976079999999
+               },
+               "southwest" : {
+                  "lat" : 18.9110642,
+                  "lng" : 172.4458955
+               }
+            },
+            "location" : {
+               "lat" : 37.09024,
+               "lng" : -95.712891
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 49.38,
+                  "lng" : -66.94
+               },
+               "southwest" : {
+                  "lat" : 25.82,
+                  "lng" : -124.39
+               }
+            }
+         },
+         "types" : [ "country", "political" ]
+      }
+   ],
+   "status" : "OK"
+}

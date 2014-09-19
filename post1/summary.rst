@@ -85,6 +85,8 @@ Collect <PairID> and <Routes> from pair_routes.xml. Match each <Route>
 in <Routes>, returns latitude and longitude, with a location using
 the Google API for reverse geocoding <https://developers.google.com/maps/documentation/geocoding/#ReverseGeocoding>.
 
+This is totally going to need some work & should be addressed first.
+
 3) Format road names
 
 We want to return a list of tuples; (pair_id, road_name). Google may
