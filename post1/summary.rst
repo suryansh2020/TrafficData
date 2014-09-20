@@ -74,7 +74,7 @@ Route
 1) Account for PairID across data sources.
 
 Given pair_id, match 'massdot_bluetoad_data$pair_id' with
-'massdot_bluetoad_data$pair_id' to make sure no ids are unaccounted.
+'pair_definitions$pair_id' to make sure no ids are unaccounted.
 Next, group 'massdot_bluetoad_data$pair_id' and see if we can account
 for pair_routes.xml; <PairID>. If we are unable to account for all
 pair Ids then figure it out. Hopefully, it's fine.
@@ -86,6 +86,7 @@ in <Routes>, returns latitude and longitude, with a location using
 the Google API for reverse geocoding <https://developers.google.com/maps/documentation/geocoding/#ReverseGeocoding>.
 
 This is totally going to need some work & should be addressed first.
+Instead of the Google API, we're going to use geonames.org <http://api.geonames.org/findNearbyStreets?> .
 
 3) Format road names
 
