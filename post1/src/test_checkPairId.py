@@ -1,10 +1,16 @@
 import nose.tools as nt
+import csv
 from tempfile import mkstemp
 from checkPairId import parse_csv, parse_xml, check_ids,\
     check_input_type, datasources, use_correct_csv_column
 
 class TestIdScript(object):
-    """ Tests for functions in checkPairId.py """
+    """ Tests for functions in checkPairId.py
+
+    Please remove temporary files after running tests.
+    $ cd /tmp/
+    $ rm *.csv
+    """
 
     def setUp(self):
         pass
@@ -77,8 +83,25 @@ class TestIdScript(object):
                                                 "pair_id"]),
                         1)
 
-    def test_parse_csv_success(self):
-        mkstemp("test.csv")
+    def create_test_file(self):
+        """ write contents in temporary file for testing """
+        garbage, test_file = mkstemp("test.csv")
+        with open(test_file, 'wb') as csvfile:
+            writer = csv.writer(csvfile, delimiter=",")
+            writer.writerow(['pair_id','not_pair_id'])
+            writer.writerow(['12345','hello world'])
+        return test_file
+
+    def test_correct_values_parse_csv(self):
+        """ See if list content is correct """
+        nt.assert_equal(parse_csv(self.create_test_file())[0], '12345')
+
+    
+
+        
+
+            
+            
         
 
     

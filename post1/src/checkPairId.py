@@ -57,7 +57,7 @@ def parse_csv(datasource):
     pair_ids = []
     with open(datasource, 'rb') as f:
         header = True
-        reader = csv.reader(f, delimiter = ",", quotechar = "")
+        reader = csv.reader(f, delimiter = ",")
         # attempt to return a list of strings, where each string
         # is a pairID
         try:
