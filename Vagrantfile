@@ -4,8 +4,8 @@
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
-MEMORY = 4096 # This matches the digital ocean droplet size
-CPU_COUNT = 2
+MEMORY = 1024 # This matches the digital ocean droplet size
+CPU_COUNT = 1
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # All Vagrant configuration is done here. The most common configuration

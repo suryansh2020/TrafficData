@@ -1,3 +1,5 @@
 *~
 MassDOThack/**
 **restricted.rst
+.vagrant/
+.vagrant/**
