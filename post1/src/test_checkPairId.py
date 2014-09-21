@@ -8,8 +8,7 @@ class TestIdScript(object):
     """ Tests for functions in checkPairId.py
 
     Please remove temporary files after running tests.
-    $ cd /tmp/
-    $ rm *.csv
+    $ rm /tmp/*.csv /tmp/*.xml
     """
 
     def setUp(self):
@@ -83,8 +82,8 @@ class TestIdScript(object):
                                                 "pair_id"]),
                         1)
 
-    def create_test_file(self):
-        """ write contents in temporary file for testing """
+    def create_test_csv_file(self):
+        """ write contents for temporary csv file """
         garbage, test_file = mkstemp("test.csv")
         with open(test_file, 'wb') as csvfile:
             writer = csv.writer(csvfile, delimiter=",")
@@ -94,7 +93,45 @@ class TestIdScript(object):
 
     def test_correct_values_parse_csv(self):
         """ See if list content is correct """
-        nt.assert_equal(parse_csv(self.create_test_file())[0], '12345')
+        nt.assert_equal(parse_csv(self.create_test_csv_file())[0],
+                        '12345')
+
+    def create_test_xml_file(self):
+        """ write contents for temporary xml file """
+        garbage, test_file = mkstemp("test.xml")
+        with open(test_file, 'wb') as xmlfile:
+            xmlfile.write("""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<btdata>
+ <TRAVELDATA>
+   <LastUpdated>Nov-30-2013 11:34:30 GMT</LastUpdated>
+  <PAIRDATA>
+   <PairID>5490</PairID>
+  </PAIRDATA>
+  <PAIRDATA>
+   <PairID>5491</PairID>
+  </PAIRDATA>
+  <PAIRDATA>
+   <PairID>5492</PairID>
+  </PAIRDATA>
+  <PAIRDATA>
+   <PairID>5493</PairID>
+  </PAIRDATA> 
+ </TRAVELDATA>    
+</btdata>
+""")
+        return test_file
+
+    def test_correct_values_parse_xml(self):
+        """ Did we parse out the correct IDs? """
+        ids_to_find = ['5490','5491','5492','5493']
+        count = 0
+        while count < len(ids_to_find):
+            nt.assert_equal(parse_xml(\
+                                      self.create_test_xml_file())\
+                            [count], ids_to_find[count])
+            count += 1
+        
+    
 
     
 

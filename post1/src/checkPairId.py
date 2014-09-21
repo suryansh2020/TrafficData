@@ -10,6 +10,7 @@ import csv
 import os
 import sys
 from collections import Counter
+import xmltodict
 
 def datasources():
     """ Location for the datasources
@@ -41,8 +42,28 @@ def datasources():
     return (massdot_bluetoad_data, pair_definitions, pair_routes)
 
 def parse_xml(datasource):
-    """ Parse XML for pairId """
-    pass
+    """ Parse XML for pairId
+    
+    If this function used xpath, I'd feel much better about it.
+    http://docs.python-guide.org/en/latest/scenarios/xml/
+
+    Args:
+        datasource: str, path to xml file
+    Returns:
+        list of strings, each string is a PairID
+    """
+    ids_we_want = []
+    with open(datasource) as fd:
+        obj = xmltodict.parse(fd.read())
+        # xml has been converted to a python dictionary,
+        # iterating through the dictionary to get all of the ids
+        for pair_id in \
+            range(len(obj[u'btdata'][u'TRAVELDATA'][u'PAIRDATA'])):
+            # get each PairID child
+            get_this = obj[u'btdata'][u'TRAVELDATA']\
+                       [u'PAIRDATA'][pair_id][u'PairID']
+            ids_we_want.append(get_this)
+        return ids_we_want
 
 def use_correct_csv_column(datasource):
     """ Let's make sure we're grabbing pair_id
@@ -105,7 +126,9 @@ def check_ids(pairIds,*args):
 
 def main(*args):
     """ Parse datasources and check for consistent pairID """
-
+    # get data
+    datasource1, datasource2, datasource3 = datasources()
+    # see if there's problems with pair_id
     if check_ids(parse_csv(datasource1),
                  parse_csv(datasource2),
                  parse_xml(datasource3)) == True:
