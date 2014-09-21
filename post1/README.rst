@@ -1,8 +1,15 @@
 Descriptive Statistics
 ======================
 
-How fast does traffic move on the highway throughout the day?
--------------------------------------------------------------
+What do we know about rush hour?
+--------------------------------
+
+Do we know when rush hour starts and stops? Is rush hour the same
+for everyone? These are some pretty simple questions that I can't
+answer. I have a rough idea, like most people, but if I had a better
+idea then maybe it would be easier/simpler to avoid. The goal of post1
+is to be introduced to the data while trying to answer a meaningful
+question.
 
 Data for real time traffic monitoring is located at massdot developer
 data <http://www.massdot.state.ma.us/DevelopersData.aspx>. In this
