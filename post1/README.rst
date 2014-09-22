@@ -83,23 +83,24 @@ Route
 -----
 
 1) *Account for PairID across data sources.* - Done
-   * Given pair_id, match 'massdot_bluetoad_data$pair_id' with
+   - Given pair_id, match 'massdot_bluetoad_data$pair_id' with
      'pair_definitions$pair_id' to make sure no ids are unaccounted.
-   * Next, group 'massdot_bluetoad_data$pair_id' and see if we can
+     
+   - Next, group 'massdot_bluetoad_data$pair_id' and see if we can
      account for pair_routes.xml; <PairID>. If we are unable to account
      for all pair Ids then figure it out. Hopefully, it's fine.
 
 2) Map coordinates to road names using Google Maps API
-   * Collect <PairID> and <Routes> from pair_routes.xml. Match each
+   - Collect <PairID> and <Routes> from pair_routes.xml. Match each
      <Route> in <Routes>, returns latitude and longitude, with a
      location using the Google API for reverse geocoding <https://developers.google.com/maps/documentation/geocoding/#ReverseGeocoding>.
 
-   * This is totally going to need some work & should be addressed
+   - This is totally going to need some work & should be addressed
      first. Instead of the Google API, we're going to use geonames.org
      <http://api.geonames.org/findNearbyStreets?> .
 
 3) Format road names
-   * We want to return a list of tuples; (pair_id, road_name). Google
+   - We want to return a list of tuples; (pair_id, road_name). Google
      may or may not format road names how you would like so just clean
      it up if necessary.
 
