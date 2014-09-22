@@ -69,11 +69,13 @@ What to do:
 At the end of the day, we're reading a csv file into some d3.js code.
 Here's our csv format:
 
+
 +-----+----+-----+---------+
 |Route|time|speed|direction|
 +=====+====+=====+=========+
 |I-93|06:00:00 AM|65mph|SB|
 +----+-----------+-----+--+
+
 
 Solving for CSV cells
 =====================
