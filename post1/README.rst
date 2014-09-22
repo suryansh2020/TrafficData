@@ -82,7 +82,7 @@ solve for Route, time, speed, and direction.
 Route
 -----
 
-1) *Account for PairID across data sources.* - Done
+1) *Account for PairID across data sources.* - **Done**
    
    - Given pair_id, match 'massdot_bluetoad_data$pair_id' with
      'pair_definitions$pair_id' to make sure no ids are unaccounted.
