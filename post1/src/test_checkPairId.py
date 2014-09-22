@@ -40,6 +40,14 @@ class TestIdScript(object):
         """ Find correct input type check """
         nt.assert_equals(check_input_type(['12345']), True)
 
+    def test_unicode_check_input_type(self):
+        """ Ran into a bug where unicode raises an error """
+        nt.assert_equals(check_input_type([u'5490']), True)
+
+    def test_check_input_type_for_not_string(self):
+        """ Make sure error raised if not a string """
+        nt.assert_raises(TypeError, check_input_type, [12345])
+
     def test_check_input_type_breaks(self):
         """ Room for improvement if necessary """
         demo = ['12345', 12345]

@@ -98,7 +98,7 @@ def parse_csv(datasource):
                                 
 def check_input_type(data):
     """ Data: str, list of pairIds """
-    if type(data[0]) != str:
+    if type(data[0]) != str and type(data[0]) != unicode:
         raise TypeError(str(data), " contains wrong type")
     else:
         return True
@@ -132,9 +132,9 @@ def main(*args):
     if check_ids(parse_csv(datasource1),
                  parse_csv(datasource2),
                  parse_xml(datasource3)) == True:
-        print "Success -- Ids match across datasources"
+        print("Success -- Ids match across datasources")
     else:
-        print "Failure -- TypeError should have been raised by now"
+        print("Failure -- TypeError should have been raised by now")
             
 
 if __name__ == "__main__":
