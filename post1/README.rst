@@ -23,11 +23,9 @@ in a more or less easy fashion on github <https://github.com/hackreduce/MassDOTh
 What does the data look like?
 -----------------------------
 
-pair_id: Identifies a pair of bluetooth sensors in a certain direction
-
-insert_time: The time at which the measurement was made
-
-travel_time: The time in seconds it takes for cars to travel the
+pair_id; Identifies a pair of bluetooth sensors in a certain direction
+insert_time; The time at which the measurement was made
+travel_time; The time in seconds it takes for cars to travel the
              road segment between the two sensors
 
 How can this be figured out?
@@ -69,6 +67,7 @@ At the end of the day, we're reading a csv file into some d3.js code.
 Here's our csv format:
 
 |Route,time,speed,direction|
+
 |I-93,06:00:00 AM,65mph,SB|
 
 Solving for CSV cells
