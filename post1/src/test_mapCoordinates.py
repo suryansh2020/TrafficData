@@ -6,16 +6,38 @@ from tempfile import mkstemp
 import codecs
 import xmltodict
 from collections import OrderedDict
+from secret import username
 from mapCoordinates import open_xml, parse_pair_id, parse_routes, \
-    parse_xml, request_route_info
+    parse_xml, request_route_info, make_geocode_api, find_road_name, \
+    create_requests
 
 class TestMapCoordinates(object):
 
     def setUp(self):
-        pass
+        self.datasource = self.create_test_dictionary()
         
     def tearDown(self):
         pass
+
+    def create_test_dictionary(self):
+        test_dict = OrderedDict([(u'geonames',
+                                  OrderedDict([(u'streetSegment',
+                                                [OrderedDict([(u'line', u'-71.211143 42.710274,'),
+                                                              (u'distance', u'0.021'),
+                                                              (u'mtfcc', u'S1100'),
+                                                              (u'name', u'I- 93'),
+                                                              (u'fraddl', None),
+                                                              (u'fraddr', None),
+                                                              (u'toaddl', None),
+                                                              (u'toaddr', None),
+                                                              (u'postalcode', None),
+                                                              (u'placename', u'Methuen Town'),
+                                                              (u'adminCode2', u'009'),
+                                                              (u'adminName2', u'Essex'),
+                                                              (u'adminCode1', u'MA'),
+                                                              (u'adminName1', u'Massachusetts'),
+                                                              (u'countryCode', u'US')])])]))])
+        return test_dict
 
     def create_test_xml_file(self):
         """ Temporary xml file that can be used for reading
@@ -99,6 +121,24 @@ class TestMapCoordinates(object):
                                       (u'lon', u'-71.20996')]),
                          OrderedDict([(u'lat', u'42.71941'),
                                       (u'lon', u'-71.20972')])])
+
+    def test_make_geocode_api(self):
+        """ API requested correctly? Concerned about imports here """
+        correct = "http://api.geonames.org/findNearbyStreets?lat=42.71946&lng=-71.20996&username=" + username
+        lat = '42.71946'
+        lon = '-71.20996'
+        nt.assert_equal(type(username), str)
+        nt.assert_equal(make_geocode_api(lat, lon), correct)
+
+    def test_request_route_info(self):
+        """ Correct item queried from dictionary? """
+        nt.assert_equal(request_route_info(self.datasource, 0),
+                        u'I- 93')
+
+    def test_create_requests(self):
+        """ Make sure default dict is correctly returned """
+        nt.assert_true(create_requests(self.create_test_xml_file(),
+                                       self.datasource).keys() > 0)
                       
         
         
