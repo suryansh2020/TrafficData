@@ -150,6 +150,8 @@ class TestMapCoordinates(object):
                         [index[1]][u'lat'], u'42.68083')
         nt.assert_equal(parse_xml(self.open_xml())[u'5491']\
                         [index[1]][u'lon'], u'-71.20208')
+
+    
         
         
                      

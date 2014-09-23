@@ -52,7 +52,12 @@ def call_geocode_api(lat, lon):
     """ Calls the api """
     r = requests.get(make_geocode_api(lat, lon))
     return xmltodict.parse(r.text)
-    
+
+def find_road_name(data, pair_id, index):
+    """ Find road name from parsed xml """
+    return call_geocode_api(data[pair_id][index][u'lat'],
+                            data[pair_id][index][u'lon'])
+
 def request_route_info(datasource, index):
     """ Returns the nearest highway from api call
 
@@ -60,27 +65,20 @@ def request_route_info(datasource, index):
     """
     return datasource['geonames']['streetSegment'][index]['name']
 
-def find_road_name(data, pair_id, index):
-    """ Find road name from parsed xml """
-    return call_geocode_api(data[pair_id][index][u'lat'],
-                            data[pair_id][index][u'lon'])
-
 def create_requests(datasource, httprequest):
     """ Create each request to geocode api """
     d = defaultdict(list)
     data = parse_xml(datasource)
-    for pair_id in data:
-        # call the first & last coordinates. Pretty sure
-        # we shouldn't have problems with routes intersecting;
-        # it could happen. Let's see how it goes.
-        first = find_road_name(data, pair_id, 0) # this code is twisted,
-        # take a break
-        last = find_road_name(data, pair_id, -1)
-        # parse out the dictionaries to return the road names
-        d[pair_id].append(request_route_info(first, 0))
-        # append the nearest highways of the first and last
-        # coordinates to the defaultdict
+    # data returns the routes, the routes plugin to the api
+    for pair_id in data.keys():
+        # we parse the api for highway names
+        request_route_info()
+        # we create a new dictionary with the highway name as the value
+        d[pair_id].append()
     return d
+
+
+        
 
 def decide_nearest_highway(datasource):
     """ Decide which highway is closest to each pair_id """
@@ -93,7 +91,8 @@ def write_csv_file(datasource):
 
 def main():
     """ Main function for program """
-    datasource = open_xml()
+    create_requests(datasource,
+                    find_road_name(data, pair_id, index))
 
 if __name__ == "__main__":
     main()

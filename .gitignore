@@ -3,3 +3,5 @@ MassDOThack/**
 **restricted.rst
 .vagrant/
 .vagrant/**
+*.pyc
+secret.py
