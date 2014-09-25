@@ -151,6 +151,15 @@ class TestMapCoordinates(object):
         nt.assert_equal(parse_xml(self.open_xml())[u'5491']\
                         [index[1]][u'lon'], u'-71.20208')
 
+    def test_create_requests(self):
+        """ Is the correct data structure returned? """
+        http_request = [u'I- 93', u'I- 95']
+        # test failing but here's your point of departure
+        nt.assert_equal(create_requests(self.create_test_xml_file(),
+                                        http_request)['5490'],
+                        [u'I- 93', u'I- 95'])
+        
+
     
         
         

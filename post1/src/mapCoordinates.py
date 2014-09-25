@@ -129,10 +129,10 @@ def create_requests(datasource, http_request):
     """ Create each request to geocode api
     
     Args:
-        datasource:
-        httprequest:
+        datasource: dict, pair_routes.xml converted via open_xml()
+        httprequest: http_request(requests, data, pair_id, index)
     Returns:
-    
+        default dict (list), where pair id is mapped to nearests roads
     """
     d = defaultdict(list)
     data = parse_xml(datasource)
