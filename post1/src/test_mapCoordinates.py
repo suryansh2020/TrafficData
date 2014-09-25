@@ -154,10 +154,15 @@ class TestMapCoordinates(object):
     def test_create_requests(self):
         """ Is the correct data structure returned? """
         http_request = [u'I- 93', u'I- 95']
-        # test failing but here's your point of departure
-        nt.assert_equal(create_requests(self.create_test_xml_file(),
-                                        http_request)['5490'],
-                        [u'I- 93', u'I- 95'])
+        # test data
+        test_data = create_requests(self.open_xml(), http_request)
+        nt.assert_equal(test_data['5490'], [u'I- 95',u'I- 93'])
+        # unless the http_request parameter passes road names each
+        # time a pair_id is requested then an empty list will be
+        # returned. 
+        nt.assert_equal(test_data['5491'], [])
+
+        # welcome to async, have fun not using twisted.
         
 
     
