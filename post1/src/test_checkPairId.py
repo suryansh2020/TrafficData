@@ -1,10 +1,12 @@
+from twisted.trial import unittest
+
 import nose.tools as nt
 import csv
 from tempfile import mkstemp
 from checkPairId import parse_csv, parse_xml, check_ids,\
     check_input_type, datasources, use_correct_csv_column
 
-class TestIdScript(object):
+class TestIdScript(unittest.TestCase):
     """ Tests for functions in checkPairId.py
 
     Please remove temporary files after running tests.
@@ -20,17 +22,17 @@ class TestIdScript(object):
     def test_check_ids_for_true_value(self):
         """ Scenarios that will return True """
         # comparing one datasource
-        nt.assert_true(check_ids(['12345'],['12345']))
+        self.assertTrue(check_ids(['12345'],['12345']))
         # comparing more than one datasource
-        nt.assert_true(check_ids(['12345'],['12345'],['12345']))
-        nt.assert_true(check_ids(['12345'],['12345'],['12345'],
+        self.assertTrue(check_ids(['12345'],['12345'],['12345']))
+        self.assertTrue(check_ids(['12345'],['12345'],['12345'],
                                  ['12345']))
-        nt.assert_true(check_ids(['12345'],['12345'],['12345'],
+        self.assertTrue(check_ids(['12345'],['12345'],['12345'],
                                  ['12345'], ['12345']))
 
     def test_check_ids_for_list_differences_error(self):
         """ Scenarios that will raise an error """
-        nt.assert_raises(UserWarning, check_ids,['12345'],['1234'])
+        self.assertRaises(UserWarning, check_ids,['12345'],['1234'])
 
     def test_check_ids_for_bad_input_values(self):
         """ Correct error raised for bad input? """

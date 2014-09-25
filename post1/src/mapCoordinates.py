@@ -125,22 +125,6 @@ def http_request(requests, data, pair_id, index):
         routes.append(request_route_info(data, requests.pop()))
     return routes
 
-def generate_request(datasource):
-    """ Since we're not using twisted, things are getting ugly
-
-    Args:
-        datasource:
-    Returns:
-        str, item from datasource.keys() OR returns False if no
-        more items in datasource.keys().
-    """
-    data = datasource.keys()
-    try:
-        while data:
-            yield data.pop()
-    except StopIteration:
-        return False
-
 def create_requests(datasource, http_request):
     """ Create each request to geocode api
     
@@ -150,25 +134,19 @@ def create_requests(datasource, http_request):
     Returns:
         default dict (list), where pair id is mapped to nearests roads
     """
-    d = defaultdict(list)
-    data = parse_xml(datasource)
-    # data returns the routes, the routes plugin to the api
-    while http_request:
-        # iterate through each pair_id when an http_request arrives
-        pair_id = generate_request(datasource).next()
-        if pair_id == False:
-            break
-        # we parse the api for highway names
-        # we create a new dictionary with the highway name as the value
-        d[pair_id].append(http_request.pop())
-    yield d
+    for pair_id in datasource.keys():
+
+        data = http_request[pair_id]
+        while data:
+            d[pair_id].append(data.pop())
+    return d
 
 # this is fucked. It might be better to redo this using twisted.
 # Async wins again.
 
 def decide_nearest_highway(datasource):
     """ Decide which highway is closest to each pair_id """
-    find_road_name(data, pair_id, index)
+    create_requests(datasource, find_road_name(data, pair_id, index))
         
 def write_csv_file(datasource):
     """ Output, (pair_id, Route)
@@ -177,8 +155,7 @@ def write_csv_file(datasource):
 
 def main():
     """ Main function for program """
-    create_requests(datasource,
-                    find_road_name(data, pair_id, index))
+    http_request(requests, data, pair_id, index)
 
 if __name__ == "__main__":
     main()
