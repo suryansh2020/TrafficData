@@ -146,15 +146,35 @@ def create_requests(datasource, http_request):
     return d
 
 # check two coordinate pairs per pair_id with geocode api
-def wtf(datasource):
-    """ make it work """
+def request_nearest_road(datasource):
+    """ Requests nears road to coordinate pair from a route
+
+    Args:
+        datasource: pair_routes.xml converted to a dictionary
+                    via open_xml()
+
+    Calls a bunch of functions:
+        parse_xml(datasource): returns pair_id and routes from
+                               pair_routes.xml
+        find_road_name(data, pair_id, index): returns results from
+                               the geocode api as a dictionary for
+                               each coordinate pair as params.
+        request_route_info(datasource, index): returns str, name of
+                               nearest highway to coordinate pair.
+
+    Returns:
+        pair_id mapped to a list of nearest highways to the first and
+        last coordinate pair given as its route from pair_id.xml
+    """
     # returns dictionary with pair_id mapped to route coordinates
     d = defaultdict(list)
     # call two coordinate pairs from each route mapped to pair_id
     data = parse_xml(datasource)
-
+    count = 0
     for pair_id in data.keys():
         # return two coordinate pairs
+        count += 1
+        print count, " out of ", len(data.keys()), " requested"
         # send each coordinate pair to the geocode api
         pair1 = find_road_name(data, pair_id, 0)
         pair2 = find_road_name(data, pair_id, -1)
@@ -170,7 +190,15 @@ def wtf(datasource):
 
 def decide_nearest_highway(datasource):
     """ Decide which highway is closest to each pair_id """
-    create_requests(datasource, find_road_name(data, pair_id, index))
+    data = request_nearest_road(datasource)
+    count = 0
+    for pair_id in data.keys():
+        start = data[pair_id].pop()
+        if start != data[pair_id].pop():
+            raise UserWarning("Something is amiss")
+        else:
+            print pair_id, "\t", count
+            count += 1
         
 def write_csv_file(datasource):
     """ Output, (pair_id, Route)
@@ -179,7 +207,7 @@ def write_csv_file(datasource):
 
 def main():
     """ Main function for program """
-    http_request(requests, data, pair_id, index)
+    decide_nearest_highway(open_xml())
 
 if __name__ == "__main__":
     main()
