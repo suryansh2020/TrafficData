@@ -4,6 +4,11 @@ Outputs a csv file (pair_id, route)
 This includes the logic for deciding the correct road when using
 reverse geocoding. 
 """
+# get pair id from pair_routes.xml, get route coordinates
+# check two coordinate pairs per pair_id with geocode api
+# return nearest road for each coordinate pair
+# pair_id mapped to nearest two roads for each coordinate pair
+# write to csv
 from collections import defaultdict
 import xmltodict
 import sys
@@ -12,6 +17,7 @@ import requests # can't justify using twisted getPage :(
 from checkPairId import datasources
 from secret import username
 
+# get pair id from pair_routes.xml, get route coordinates
 def open_xml():
     """ Opens pair_routes.xml and returns a dictionary """
     gb1,gb2,pair_routes = datasources()
@@ -101,23 +107,21 @@ def request_route_info(datasource, index):
     """
     return datasource['geonames']['streetSegment'][index]['name']
 
-def http_request(requests, data, pair_id, index):
+def http_request(requests, datasource):
     """ Sanity inducing, need to know which functions are making the
     http request.
 
     Args:
         requests: list, int, indexed position of roads you want to be
-                  returned. If you want just the nearest road then you'd
-                  want [0].
-        data: dict, pair_id mapped onto an ordered_dict of coordinates
-        pair_id: key value from the data parameter
-        index: int, iterator that chooses coordinate pairs
+                  returned. If you want just the nearest road then
+                  you'd want [0].
+        datasource: find_road_name(data, pair_id, index)
     Returns:
         List, str; list of closest streets/highways to the coordinates
         given 
     """
     # Dictionary of parsed xml from the geocode api
-    data = find_road_name(data, pair_id, index)
+    data = datasource
     # nearest highways to given coordinates; using reverse geocoding
     routes = []
     # parses out closest roads depending on the index value of requests
@@ -129,7 +133,7 @@ def create_requests(datasource, http_request):
     """ Create each request to geocode api
     
     Args:
-        datasource: dict, pair_routes.xml converted via open_xml()
+        datasource: dict, pair_routes.xml converted using parse_xml()
         httprequest: http_request(requests, data, pair_id, index)
     Returns:
         default dict (list), where pair id is mapped to nearests roads
@@ -141,8 +145,28 @@ def create_requests(datasource, http_request):
             d[pair_id].append(data.pop())
     return d
 
-# this is fucked. It might be better to redo this using twisted.
-# Async wins again.
+# check two coordinate pairs per pair_id with geocode api
+def wtf(datasource):
+    """ make it work """
+    # returns dictionary with pair_id mapped to route coordinates
+    d = defaultdict(list)
+    # call two coordinate pairs from each route mapped to pair_id
+    data = parse_xml(datasource)
+
+    for pair_id in data.keys():
+        # return two coordinate pairs
+        # send each coordinate pair to the geocode api
+        pair1 = find_road_name(data, pair_id, 0)
+        pair2 = find_road_name(data, pair_id, -1)
+
+        # parse contents from api to get route names
+        nearest_road1 = request_route_info(pair1, 0)
+        nearest_road2 = request_route_info(pair2, 0)
+
+        # append nearest roads for each pair_id
+        d[pair_id].append(nearest_road1)
+        d[pair_id].append(nearest_road2)
+    return d
 
 def decide_nearest_highway(datasource):
     """ Decide which highway is closest to each pair_id """
@@ -159,4 +183,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
 
