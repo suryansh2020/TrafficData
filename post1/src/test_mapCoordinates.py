@@ -1,7 +1,6 @@
 """
 Tests functions included in mapCoordinates.py
 """
-from twisted.trial import unittest
 import nose.tools as nt
 from tempfile import mkstemp
 import codecs
@@ -12,7 +11,7 @@ from mapCoordinates import open_xml, parse_pair_id, parse_routes, \
     parse_xml, request_route_info, make_geocode_api, find_road_name, \
     create_requests
 
-class TestMapCoordinates(unittest.TestCase):
+class TestMapCoordinates(object):
 
     def setUp(self):
         self.datasource = self.create_test_dictionary()
