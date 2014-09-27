@@ -145,6 +145,16 @@ def create_requests(datasource, http_request):
             d[pair_id].append(data.pop())
     return d
 
+def get_strt_suggestions(datasource):
+    """ Return street suggestions from geocode api
+
+    Args:
+        datasource: pass
+    Returns:
+        List, str, closest road to a set of coordinates.
+    """
+    pass
+    
 # check two coordinate pairs per pair_id with geocode api
 def request_nearest_road(datasource):
     """ Requests nears road to coordinate pair from a route
@@ -187,6 +197,14 @@ def request_nearest_road(datasource):
         d[pair_id].append(nearest_road1)
         d[pair_id].append(nearest_road2)
     return d
+
+def output_to_json(datasource):
+    """ Outputs geocode results to JSON """
+    pass
+
+
+
+
 
 def decide_nearest_highway(datasource):
     """ Decide which highway is closest to each pair_id """
