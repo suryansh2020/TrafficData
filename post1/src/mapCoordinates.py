@@ -9,10 +9,14 @@ reverse geocoding.
 # return nearest road for each coordinate pair
 # pair_id mapped to nearest two roads for each coordinate pair
 # write to csv
-from collections import defaultdict
-import xmltodict
 import sys
+import io
+import json
+import logging
+from collections import defaultdict
+
 import requests # can't justify using twisted getPage :(
+import xmltodict
 
 from checkPairId import datasources
 from secret import username
@@ -95,18 +99,6 @@ def find_road_name(data, pair_id, index):
     return call_geocode_api(data[pair_id][index][u'lat'],
                             data[pair_id][index][u'lon'])
 
-def request_route_info(datasource, index):
-    """ Returns the nearest highway from api call
-
-    It's called reverse geocoding and I'm a fan.
-    Args:
-       datasource: dict, xml to dictionary for request of geonames api
-       index: int, iterator for choosing nearby streets
-    Returns:
-       str, name of nearest street/highway
-    """
-    return datasource['geonames']['streetSegment'][index]['name']
-
 def http_request(requests, datasource):
     """ Sanity inducing, need to know which functions are making the
     http request.
@@ -145,7 +137,19 @@ def create_requests(datasource, http_request):
             d[pair_id].append(data.pop())
     return d
 
-def get_strt_suggestions(datasource):
+def request_route_info(datasource, index):
+    """ Returns the nearest highway from api call
+
+    It's called reverse geocoding and I'm a fan.
+    Args:
+       datasource: dict, xml to dictionary for request of geonames api
+       index: int, iterator for choosing nearby streets
+    Returns:
+       str, name of nearest street/highway
+    """
+    return datasource['geonames']['streetSegment'][index]['name']
+
+def street_suggestions(datasource):
     """ Return street suggestions from geocode api
 
     Args:
@@ -153,7 +157,12 @@ def get_strt_suggestions(datasource):
     Returns:
         List, str, closest road to a set of coordinates.
     """
-    pass
+    count = 0
+    nearest_roads = []
+    while count < len(datasource['geonames']['streetSegment']):
+        nearest_roads.append(request_route_info(datasource, count))
+        count += 1
+    return nearest_roads
     
 # check two coordinate pairs per pair_id with geocode api
 def request_nearest_road(datasource):
@@ -190,42 +199,23 @@ def request_nearest_road(datasource):
         pair2 = find_road_name(data, pair_id, -1)
 
         # parse contents from api to get route names
-        nearest_road1 = request_route_info(pair1, 0)
-        nearest_road2 = request_route_info(pair2, 0)
+        nearest_road1 = street_suggestions(pair1)
+        nearest_road2 = street_suggestions(pair2)
 
         # append nearest roads for each pair_id
-        d[pair_id].append(nearest_road1)
-        d[pair_id].append(nearest_road2)
+        d[pair_id].append((nearest_road1, nearest_road2))
     return d
 
 def output_to_json(datasource):
     """ Outputs geocode results to JSON """
-    pass
-
-
-
-
-
-def decide_nearest_highway(datasource):
-    """ Decide which highway is closest to each pair_id """
-    data = request_nearest_road(datasource)
-    count = 0
-    for pair_id in data.keys():
-        start = data[pair_id].pop()
-        if start != data[pair_id].pop():
-            raise UserWarning("Something is amiss")
-        else:
-            print pair_id, "\t", count
-            count += 1
-        
-def write_csv_file(datasource):
-    """ Output, (pair_id, Route)
-    """
-    pass
-
+    # needs to support utf-8
+    with io.open("geocode.txt", 'w', encoding="utf-8") as f:
+        f.write(unicode(json.dumps(datasource, ensure_ascii=False)))
+    f.close()
+   
 def main():
     """ Main function for program """
-    decide_nearest_highway(open_xml())
+    output_to_json(request_nearest_road(open_xml()))
 
 if __name__ == "__main__":
     main()
