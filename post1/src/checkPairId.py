@@ -99,9 +99,9 @@ def parse_csv(datasource):
             sys.exit('datasource %s, line %d: %s' % (datasource,
                                                      reader.line_num,
                                                      e))
-def log_differences():
+def enable_log(log_name):
     """ Enable logs written to file """
-    logging.basicConfig(filename="differences.log",
+    logging.basicConfig(filename= log_name + ".log",
                         level=logging.DEBUG)
 
 
@@ -166,5 +166,5 @@ def main(*args):
             
 
 if __name__ == "__main__":
-    log_differences()
+    enable_log("differences")
     main()

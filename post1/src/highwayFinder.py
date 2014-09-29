@@ -12,13 +12,28 @@ However, most descriptions are something like 'I-90 WB after on-ramp
 regular expressions and reasonably conclude that this point is located
 on 'I-90'. When we plug in the pair_id, '10498', to the geocode api,
 we find that 'I-90', is also returned.
+
+It's also important to know that Ids don't match across the three
+datasources we have available. There's not much we can do about it.
+The solution is to just use what's in the xml as the point of
+departure. Otherwise, we have no way of attaching coordinates to
+the data. We should just acknowledge these data points as 'dead'
+and have a funeral.
 """
 import os
 import io
+import re
+import csv
 import json
+import time
+import logging
+
+from checkPairId import datasources, enable_log
 
 def read_json():
     """ Reading in json data from geocode api 
+
+    json data is based on pair_routes.xml
 
     Bypassing tests that the user is in the correct directory because
     they should have figured it out by now.
@@ -26,11 +41,65 @@ def read_json():
     da_path = os.path.abspath("")+ "/post1/src/geocode.txt"
     # needs to support utf-8
     with io.open(da_path, 'r', encoding="utf-8") as f:
+        logging.info("Read json file into memory")
         return json.load(f)
+
+def use_correct_csv_column(datasource):
+    """ Let's make sure we're grabbing the correct columns
     
+    Returns:
+        Tuple, pair_id, Description from pair_definitions.csv
+    """
+    logging.info("Indexed row for reading csv file")
+    return (datasource.index("pair_id"),
+            datasource.index("Description"))
+    
+def read_description(datasources):
+    """ Returns pair_id mapped to description
+    from pair_definitions.csv"""
+    # timing function
+    start = time.time()
+    # path to data
+    junk, datasource, junk = datasources
+    pair_definitions = {}
+    with open(datasource, 'rb') as f:
+        header = True
+        reader = csv.reader(f, delimiter = ",")
+        # attempt to return a list of strings, where each string
+        # is a pairID
+        try:
+            for row in reader:
+                if header == True:
+                    logging.info("Read in header of csv")
+                    pair_id, definition = use_correct_csv_column(row)
+                    header = False
+                else:
+                    pair_definitions[row[pair_id]]=row[definition]
+        except csv.Error as e:
+            logging.critical('datasource %s, line %d: %s' %
+                             (datasource, reader.line_num, e))
+    logging.info("Elapsed time for parse: " + str(time.time() - start))
+    return pair_definitions
 
+def parse_description(datasource):
+    """ Parse out highway name from description
+    
+    Pulling highway names from the description given by the DOT. We're
+    going to make a set of mutually exclusive rules about the contents
+    of the description fields. We'll translate those rules to regular
+    expressions.
 
+    Args:
+        datasource: dict, datastructure from read_description()
+    Returns:
+        dict, tuple, turns value of dict to a tuple containing the
+        original string and the predicted highway location 
+    """
+    # All highway names will be referenced ahead of the words 'before'
+    # or 'after', unless those words are not used at all.
 
+    # If a value does not include 'before' or 'after' then ????
+    pass
 
 
 def decide_nearest_highway(datasource):
@@ -54,4 +123,5 @@ def main():
     pass
 
 if __name__ == "__main__":
+    enable_log("highwayFinder")
     main()
