@@ -5,10 +5,14 @@ Given pair_id, match 'massdot_bluetoad_data$pair_id' with
 Next, group 'massdot_bluetoad_data$pair_id' and see if we can account
 for pair_routes.xml; <PairID>. If we are unable to account for all
 pair Ids then figure it out. Hopefully, it's fine.
+
+There are differences between datasets. Lets log the differences &
+go from there.
 """
 import csv
 import os
 import sys
+import logging
 from collections import Counter
 import xmltodict
 
@@ -95,7 +99,12 @@ def parse_csv(datasource):
             sys.exit('datasource %s, line %d: %s' % (datasource,
                                                      reader.line_num,
                                                      e))
-                                
+def log_differences():
+    """ Enable logs written to file """
+    logging.basicConfig(filename="differences.log",
+                        level=logging.DEBUG)
+
+
 def check_input_type(data):
     """ Data: str, list of pairIds """
     if type(data[0]) != str and type(data[0]) != unicode:
@@ -104,7 +113,10 @@ def check_input_type(data):
         return True
 
 def check_ids(pairIds,*args):
-    """ Check ids to see if any are missing
+    """ Check ids to see if any are different
+
+    Note that this will check to see if the IDs are different but
+    they will not check to see if a list is incomplete.
 
     Args:
         pairIds: str, list of pairIds
@@ -112,14 +124,27 @@ def check_ids(pairIds,*args):
     Returns:
         Boolean: True if all IDs are present in all datasources
     """
+    logging.info('Beginning to check pair_id across datasources')
     if check_input_type(pairIds) == True:
         base = set(pairIds)
+        logging.info('Param 0 converted to a set')
     # compare other datasources
+    param_count = 0
     for list_of_ids in args:
+        param_count += 1
+        logging.info('Param ' +str(param_count)+' converted to a set')
         # Check for differences between lists by using sets.
-        if check_input_type(list_of_ids) == True and \
-           len(set(list_of_ids) - base) != 0:
+        if check_input_type(list_of_ids) != True:
+            logging.debug("[E1] Input type not a string or unicode")
+        if len(set(list_of_ids) - base) != 0:
+            logging.warning("Param # members not present in Param 0")
+            logging.debug("[E2] Difference " + \
+                          str(set(list_of_ids) - base))
             raise UserWarning(str(list_of_ids), " missing value")
+        if len(base - set(list_of_ids)) != 0:
+            logging.warning("Param 0  members not present in Param #")
+            logging.debug("[E2] Difference " + \
+                          str(base - set(list_of_ids)))
         else:
             pass
     return True
@@ -128,14 +153,18 @@ def main(*args):
     """ Parse datasources and check for consistent pairID """
     # get data
     datasource1, datasource2, datasource3 = datasources()
+    logging.info("param 0 is: " +str(datasource1))
+    logging.info("param 1 is: " +str(datasource2))
+    logging.info("param 2 is: " +str(datasource3))
     # see if there's problems with pair_id
     if check_ids(parse_csv(datasource1),
                  parse_csv(datasource2),
                  parse_xml(datasource3)) == True:
-        print("Success -- Ids match across datasources")
+        print("Review logs for missing Ids")
     else:
         print("Failure -- TypeError should have been raised by now")
             
 
 if __name__ == "__main__":
+    log_differences()
     main()

@@ -1,0 +1,11 @@
+INFO:root:param 0 is: /home/tbonza/projects/TrafficData/MassDOThack/Road_RTTM_Volume/massdot_bluetoad_data/massdot_bluetoad_data.csv
+INFO:root:param 1 is: /home/tbonza/projects/TrafficData/MassDOThack/Road_RTTM_Volume/pair_definitions.csv
+INFO:root:param 2 is: /home/tbonza/projects/TrafficData/MassDOThack/Road_RTTM_Volume/pair_routes.xml
+INFO:root:Beginning to check pair_id across datasources
+INFO:root:Param 0 converted to a set
+INFO:root:Param 1 converted to a set
+WARNING:root:Param 0  members not present in Param #
+DEBUG:root:[E2] Difference set(['10600', '10601'])
+INFO:root:Param 2 converted to a set
+WARNING:root:Param 0  members not present in Param #
+DEBUG:root:[E2] Difference set(['10600', '10601', '8028', '8029', '10596', '10597', '10594', '10595', '10598', '10599', '8026', '8027'])
