@@ -3,7 +3,8 @@ import csv
 
 import nose.tools as nt
 
-from highwayFinder import use_correct_csv_column, read_description
+from highwayFinder import use_correct_csv_column, read_description,\
+    parse_description
 
 class TestHighwayFinder(object):
     """ Tests for highwayFinder.py
