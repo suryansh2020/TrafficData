@@ -27,6 +27,7 @@ import csv
 import json
 import time
 import logging
+from collections import Counter
 
 from checkPairId import datasources, enable_log
 
@@ -81,65 +82,43 @@ def read_description(datasources):
     logging.info("Elapsed time for parse: " + str(time.time() - start))
     return pair_definitions
 
-def parse_name(colname, pattern):
-    """ Parse this based on the pattern """
-    highway = re.compile("(\w-\d{2})|(^\d{2})|(^\d{3})|(^\w{3}\W{2}\d)")
-    if highway.search(colname):
-        return highway.search(colname).group(0) #first group assumption
+def parse_description(datasource):
+    """ Just don't try to regex pair_definitions.csv. It's a mess.
+    Compare the reverse geocoding to the descriptions given but like
+    don't go down this road. Life is too short. """
+    pass
 
-    if pattern == 1:
-        pattern = re.compile("")
-        if pattern.search(colname) == None: 
-    elif pattern == 2:
-        pass
-    elif pattern == 3:
-        pass
-    else:
-        logging.critical("Incorrect pattern assigned: ", str(pattern))
-        return False
-
-def parse_description(colname):
-    """ Parse out highway name from description
-    
-    Pulling highway names from the description given by the DOT. We're
-    going to make a set of mutually exclusive rules about the contents
-    of the description fields. We'll translate those rules to regular
-    expressions.
+def nearest_highway(geocode_json):
+    """ Finds the nearest highway
 
     Args:
-        datasource: dict, datastructure from read_description()
+        geocode_json: Geocode api written to json; can be accessed
+                      using open_json()
     Returns:
-        dict, tuple, turns value of dict to a tuple containing the
-        original string and the predicted highway location 
+        Dict, str, pair_id mapped onto the nearest highway
     """
-    pattern = 0
-    member = set(['before','after','to'])
-    colset = set(colname.lower().split(" "))
-    # If a value includes both 'before' and 'after' but also includes
-    # 'TO' then identify the road before 'TO'
-    if member <= colset: # is subset?
-        pattern = 1
-        parse_name(colname, pattern)
+    for pair_id in geocode_json.keys():
+        first = True
+        count = 0
+        while count < len(geocode_json[pair_id][0]):
+            # this is a little messy but you can probably see
+            # where this is headed
+            c = Counter(geocode_json[pair_id][0][count])
+            road, num = c.most_common(1)[0]
+            if first:
+                road = agree
+                first = False
+                count += 1
+            elif road == agree:
+                count += 1
+            else:
+                logging.critical("
+                count += 1
+
         
-    # All highway names will be referenced ahead of the words 'before'
-    # or 'after', unless those words are not used at all. 
-    detach = member.pop()
-    elif member in colset:
-        pattern = 2
-        parse_name(colname, pattern)
+            
 
-    # If 'before' or 'after' are not used then 'to' will be used.
-    # The highway will be referenced before 'to'
-    elif detach in colset:
-        pattern = 3
-        parse_name(colname, pattern)
-
-    # We can't find a pattern for the description if we've reached
-    # this point.
-    else:
-        logging.error("Pattern not matched: ", colname)
-        return False
-
+    
 # run parse_description() through a for loop here        
 def decide_nearest_highway(datasource):
     """ Decide which highway is closest to each pair_id """
