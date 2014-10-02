@@ -82,23 +82,21 @@ def read_description(datasources):
     return pair_definitions
 
 def parse_name(colname, pattern):
-    """ Parse out highway name from pair_definitions$Description """
-    # Highway name may take the form 'I-90'
-    # Highway name may take the form '495SB'
+    """ Parse this based on the pattern """
+    highway = re.compile("(\w-\d{2})|(^\d{2})|(^\d{3})|(^\w{3}\W{2}\d)")
+    if highway.search(colname):
+        return highway.search(colname).group(0) #first group assumption
+
     if pattern == 1:
-        # Identify the road before 'TO'.
-        re.compile(
+        pattern = re.compile("")
+        if pattern.search(colname) == None: 
     elif pattern == 2:
         pass
     elif pattern == 3:
         pass
-
-    a = re.compile("(\w-\d{2})|(^\d{2})") # this may be sufficient
     else:
         logging.critical("Incorrect pattern assigned: ", str(pattern))
-
-
-    
+        return False
 
 def parse_description(colname):
     """ Parse out highway name from description
@@ -115,37 +113,34 @@ def parse_description(colname):
         original string and the predicted highway location 
     """
     pattern = 0
-    member = set(['before','after', 'to'])
+    member = set(['before','after','to'])
     colset = set(colname.lower().split(" "))
     # If a value includes both 'before' and 'after' but also includes
-    # 'TO' then identify the road before 'TO'.
+    # 'TO' then identify the road before 'TO'
     if member <= colset: # is subset?
         pattern = 1
-        pass # regex that splits using 'TO'.
-    
+        parse_name(colname, pattern)
+        
     # All highway names will be referenced ahead of the words 'before'
-    # or 'after', unless those words are not used at all.
-    detach = member.pop() 
+    # or 'after', unless those words are not used at all. 
+    detach = member.pop()
     elif member in colset:
         pattern = 2
-        pass # regex here
+        parse_name(colname, pattern)
 
     # If 'before' or 'after' are not used then 'to' will be used.
-    # The highway will be referenced before 'to'.
+    # The highway will be referenced before 'to'
     elif detach in colset:
         pattern = 3
-        pass #regex for test
+        parse_name(colname, pattern)
 
     # We can't find a pattern for the description if we've reached
     # this point.
     else:
         logging.error("Pattern not matched: ", colname)
+        return False
 
-
-# run parse_description() through a for loop here
-
-
-        
+# run parse_description() through a for loop here        
 def decide_nearest_highway(datasource):
     """ Decide which highway is closest to each pair_id """
     data = request_nearest_road(datasource)

@@ -56,8 +56,18 @@ class TestHighwayFinder(object):
                                            "junk"))['12346'],
                                           self.desc_example()[1])
 
-    def test_regex_parse(self):
+    def test_parse_description(self):
         """ oh boy, regex """
+        nt.assert_equals(parse_description(self.desc_example()[0]),
+                         "I-90")
+        nt.assert_equals(parse_description(self.desc_example()[1]),
+                         "395")
+        nt.assert_equals(parse_description(self.desc_example()[2]),
+                         "Rte. 3")
+        nt.assert_equals(parse_description(self.desc_example()[3]),
+                         "I-90")
+        nt.assert_equals(parse_description(self.desc_example()[4]),
+                         "I-95")
 
     
 
