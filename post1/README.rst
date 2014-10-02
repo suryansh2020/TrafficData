@@ -101,7 +101,7 @@ Route
      account for pair_routes.xml; <PairID>. If we are unable to account
      for all pair Ids then figure it out. Hopefully, it's fine.
 
-2) Map coordinates to road names using Google Maps API
+2) Map coordinates to road names using Google Maps API - **Done**
    
    - Collect <PairID> and <Routes> from pair_routes.xml. Match each
      <Route> in <Routes>, returns latitude and longitude, with a
@@ -111,7 +111,13 @@ Route
      first. Instead of the Google API, we're going to use geonames.org
      <http://api.geonames.org/findNearbyStreets?> .
 
-3) Format road names
+3) Match road names to existing description
+
+   - Both the API and the descriptions given in pair_definitions.csv contain
+     incomplete information. Let's take what we can from both & try to fill
+     in the blanks.
+
+4) Format road names
    
    - We want to return a list of tuples; (pair_id, road_name). Google
      may or may not format road names how you would like so just clean
