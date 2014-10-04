@@ -93,52 +93,50 @@ def nearest_highway(geocode_json):
 
     Args:
         geocode_json: Geocode api written to json; can be accessed
-                      using open_json()
+                      using read_json()
     Returns:
         Dict, str, pair_id mapped onto the nearest highway
     """
+    logging.info("STARTED - Nearest highway comparisons")
     for pair_id in geocode_json.keys():
-        first = True
         count = 0
+        logging.info("Using pair_id: "+ str(pair_id))
         while count < len(geocode_json[pair_id][0]):
-            # this is a little messy but you can probably see
-            # where this is headed
+            first = True
+            agree = "None"
+            
             c = Counter(geocode_json[pair_id][0][count])
             road, num = c.most_common(1)[0]
+            logging.info(agree)
+            logging.info(road)
             if first:
+                logging.info("Set first most common road to itself")
                 road = agree
                 first = False
-                count += 1
+                
+            elif road != agree:
+                logging.info("Using list number: " + str(count))
+                logging.critical(str(agree) + " is not equal to " +\
+                                 str(road))
+                
             elif road == agree:
-                count += 1
+                logging.info("Using list number: " + str(count))
+                logging.info(str(agree) + " is equal to " +str(road))
+
             else:
-                logging.critical("
-                count += 1
+                logging.critical("Trouble in paradise")
+            logging.critical(str(count))
+            count += 1
+    logging.info("FINISHED - Nearest highway comparisons")
 
         
-            
-
-    
-# run parse_description() through a for loop here        
-def decide_nearest_highway(datasource):
-    """ Decide which highway is closest to each pair_id """
-    data = request_nearest_road(datasource)
-    count = 0
-    for pair_id in data.keys():
-        start = data[pair_id].pop()
-        if start != data[pair_id].pop():
-            raise UserWarning("Something is amiss")
-        else:
-            print pair_id, "\t", count
-            count += 1
-
 def write_csv_file(datasource):
     """ Output, (pair_id, Route)
     """
     pass
 
 def main():
-    pass
+    nearest_highway(read_json())
 
 if __name__ == "__main__":
     enable_log("highwayFinder")
