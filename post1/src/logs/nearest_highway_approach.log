@@ -1,0 +1,934 @@
+INFO:root:Read json file into memory
+INFO:root:STARTED - Nearest highway comparisons
+INFO:root:Using pair_id: 10083
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10215
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 395
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to I- 395
+INFO:root:Using pair_id: 10214
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10216
+INFO:root:I- 395
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:I- 395 is not equal to I- 90
+INFO:root:Using pair_id: 10109
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 495
+INFO:root:Using list number: 1
+INFO:root:I- 495 is equal to I- 495
+INFO:root:Using pair_id: 10108
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:I- 495 is not equal to I- 90
+INFO:root:Using pair_id: 5508
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5509
+INFO:root:Dorchester Ave
+INFO:root:Set first most common road to itself
+INFO:root:Leverett Con
+INFO:root:Using list number: 1
+CRITICAL:root:Dorchester Ave is not equal to Leverett Con
+INFO:root:Using pair_id: 5506
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to I- 93
+INFO:root:Using pair_id: 5507
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:Dorchester Ave
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to Dorchester Ave
+INFO:root:Using pair_id: 5504
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+INFO:root:None is equal to None
+INFO:root:Using pair_id: 5505
+INFO:root:State Rte 24
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:State Rte 24 is not equal to None
+INFO:root:Using pair_id: 5502
+INFO:root:Granite Ave
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:Granite Ave is not equal to None
+INFO:root:Using pair_id: 5503
+INFO:root:I- 95
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 95 is not equal to None
+INFO:root:Using pair_id: 5500
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to None
+INFO:root:Using pair_id: 5501
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+INFO:root:None is equal to None
+INFO:root:Using pair_id: 10185
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 5587
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5584
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 495
+INFO:root:Using list number: 1
+INFO:root:I- 495 is equal to I- 495
+INFO:root:Using pair_id: 10186
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 10181
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 10180
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 5580
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:I- 495 is not equal to I- 93
+INFO:root:Using pair_id: 5581
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 10189
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 10188
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 5588
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 10356
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:Lincoln St
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to Lincoln St
+INFO:root:Using pair_id: 10357
+INFO:root:Lincoln St
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:Lincoln St is not equal to I- 90
+INFO:root:Using pair_id: 10358
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:Lincoln St
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to Lincoln St
+INFO:root:Using pair_id: 10359
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:Lincoln St
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to Lincoln St
+INFO:root:Using pair_id: 5511
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5510
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 10110
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 495
+INFO:root:Using list number: 1
+INFO:root:I- 495 is equal to I- 495
+INFO:root:Using pair_id: 10192
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+INFO:root:None is equal to None
+INFO:root:Using pair_id: 10193
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to None
+INFO:root:Using pair_id: 10190
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 10213
+INFO:root:I- 395
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:I- 395 is not equal to I- 90
+INFO:root:Using pair_id: 10105
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:I- 495 is not equal to I- 90
+INFO:root:Using pair_id: 9650
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to I- 93
+INFO:root:Using pair_id: 5498
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:Leverett Con
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to Leverett Con
+INFO:root:Using pair_id: 5499
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:Leverett Con
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to Leverett Con
+INFO:root:Using pair_id: 5494
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5495
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:Leverett Con
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to Leverett Con
+INFO:root:Using pair_id: 5496
+INFO:root:Beacon St
+INFO:root:Set first most common road to itself
+INFO:root:Leverett Con
+INFO:root:Using list number: 1
+CRITICAL:root:Beacon St is not equal to Leverett Con
+INFO:root:Using pair_id: 5497
+INFO:root:Parker Rd
+INFO:root:Set first most common road to itself
+INFO:root:Leverett Con
+INFO:root:Using list number: 1
+CRITICAL:root:Parker Rd is not equal to Leverett Con
+INFO:root:Using pair_id: 5490
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5491
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5492
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:I- 495 is not equal to I- 93
+INFO:root:Using pair_id: 5493
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:I- 495 is not equal to I- 93
+INFO:root:Using pair_id: 5568
+INFO:root:Beacon St
+INFO:root:Set first most common road to itself
+INFO:root:Parker Rd
+INFO:root:Using list number: 1
+CRITICAL:root:Beacon St is not equal to Parker Rd
+INFO:root:Using pair_id: 5569
+INFO:root:Parker Rd
+INFO:root:Set first most common road to itself
+INFO:root:Beacon St
+INFO:root:Using list number: 1
+CRITICAL:root:Parker Rd is not equal to Beacon St
+INFO:root:Using pair_id: 5564
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:Parker Rd
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to Parker Rd
+INFO:root:Using pair_id: 5565
+INFO:root:Parker Rd
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:Parker Rd is not equal to I- 93
+INFO:root:Using pair_id: 5566
+INFO:root:Beacon St
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:Beacon St is not equal to I- 93
+INFO:root:Using pair_id: 5567
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:Beacon St
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to Beacon St
+INFO:root:Using pair_id: 5560
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5561
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5562
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:Beacon St
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to Beacon St
+INFO:root:Using pair_id: 5563
+INFO:root:Beacon St
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:Beacon St is not equal to I- 93
+INFO:root:Using pair_id: 10184
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 10182
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 10187
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 9649
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to I- 93
+INFO:root:Using pair_id: 9648
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to None
+INFO:root:Using pair_id: 9647
+INFO:root:Granite Ave
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:Granite Ave is not equal to I- 93
+INFO:root:Using pair_id: 9646
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5583
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 495
+INFO:root:Using list number: 1
+INFO:root:I- 495 is equal to I- 495
+INFO:root:Using pair_id: 10183
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 5579
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:I- 495 is not equal to I- 93
+INFO:root:Using pair_id: 5578
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 495
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to I- 495
+INFO:root:Using pair_id: 5577
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:I- 495 is not equal to I- 93
+INFO:root:Using pair_id: 5575
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5574
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5573
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5572
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5571
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:Parker Rd
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to Parker Rd
+INFO:root:Using pair_id: 5570
+INFO:root:Parker Rd
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:Parker Rd is not equal to I- 93
+INFO:root:Using pair_id: 10387
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 495
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to I- 495
+INFO:root:Using pair_id: 10386
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10385
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10384
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to I- 90
+INFO:root:Using pair_id: 10383
+INFO:root:I- 95
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:I- 95 is not equal to I- 90
+INFO:root:Using pair_id: 10382
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10381
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to None
+INFO:root:Using pair_id: 10380
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 95
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to I- 95
+INFO:root:Using pair_id: 10374
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10389
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10388
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 495
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to I- 495
+INFO:root:Using pair_id: 5548
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to I- 93
+INFO:root:Using pair_id: 10375
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 5542
+INFO:root:State Hwy 24
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:State Hwy 24 is not equal to None
+INFO:root:Using pair_id: 5543
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:State Rte 24
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to State Rte 24
+INFO:root:Using pair_id: 5540
+INFO:root:I- 95
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 95 is not equal to None
+INFO:root:Using pair_id: 5541
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:I- 95
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to I- 95
+INFO:root:Using pair_id: 5546
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to I- 93
+INFO:root:Using pair_id: 5547
+INFO:root:Granite Ave
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:Granite Ave is not equal to None
+INFO:root:Using pair_id: 5545
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+INFO:root:None is equal to None
+INFO:root:Using pair_id: 9502
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 95
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to I- 95
+INFO:root:Using pair_id: 9503
+INFO:root:I- 95
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:I- 95 is not equal to I- 93
+INFO:root:Using pair_id: 9500
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to None
+INFO:root:Using pair_id: 9501
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to I- 93
+INFO:root:Using pair_id: 9506
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to None
+INFO:root:Using pair_id: 9507
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to I- 93
+INFO:root:Using pair_id: 9504
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:State Rte 24
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to State Rte 24
+INFO:root:Using pair_id: 9505
+INFO:root:State Hwy 24
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+CRITICAL:root:State Hwy 24 is not equal to I- 93
+INFO:root:Using pair_id: 5555
+INFO:root:Leverett Con
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:Leverett Con is not equal to None
+INFO:root:Using pair_id: 5554
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:Leverett Con
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to Leverett Con
+INFO:root:Using pair_id: 5557
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:Leverett Con
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to Leverett Con
+INFO:root:Using pair_id: 5556
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5551
+INFO:root:Dorchester Ave
+INFO:root:Set first most common road to itself
+INFO:root:Granite Ave
+INFO:root:Using list number: 1
+CRITICAL:root:Dorchester Ave is not equal to Granite Ave
+INFO:root:Using pair_id: 5550
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5553
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:Dorchester Ave
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to Dorchester Ave
+INFO:root:Using pair_id: 5552
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to None
+INFO:root:Using pair_id: 10240
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 495
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to I- 495
+INFO:root:Using pair_id: 5559
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 5558
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93
+INFO:root:Using list number: 1
+INFO:root:I- 93 is equal to I- 93
+INFO:root:Using pair_id: 10245
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:Pilgrim's Hwy is not equal to None
+INFO:root:Using pair_id: 10092
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 395
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to I- 395
+INFO:root:Using pair_id: 10091
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10090
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10499
+INFO:root:Lowell Ave
+INFO:root:Set first most common road to itself
+INFO:root:Lincoln St
+INFO:root:Using list number: 1
+CRITICAL:root:Lowell Ave is not equal to Lincoln St
+INFO:root:Using pair_id: 10498
+INFO:root:Lowell Ave
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:Lowell Ave is not equal to I- 90
+INFO:root:Using pair_id: 10497
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10496
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10525
+INFO:root:I- 93
+INFO:root:Set first most common road to itself
+INFO:root:I- 93 Frontage Rd
+INFO:root:Using list number: 1
+CRITICAL:root:I- 93 is not equal to I- 93 Frontage Rd
+INFO:root:Using pair_id: 10364
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:Leverett Con
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to Leverett Con
+INFO:root:Using pair_id: 10361
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10239
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 495
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to I- 495
+INFO:root:Using pair_id: 10363
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to None
+INFO:root:Using pair_id: 10362
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to I- 90
+INFO:root:Using pair_id: 10238
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10088
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10089
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 84
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to I- 84
+INFO:root:Using pair_id: 10084
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:I- 495 is not equal to I- 90
+INFO:root:Using pair_id: 10085
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10086
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10087
+INFO:root:I- 395
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:I- 395 is not equal to I- 90
+INFO:root:Using pair_id: 10081
+INFO:root:I- 84
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:I- 84 is not equal to I- 90
+INFO:root:Using pair_id: 10082
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10360
+INFO:root:Lowell Ave
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:Lowell Ave is not equal to I- 90
+INFO:root:Using pair_id: 10178
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 10179
+INFO:root:Pilgrim's Hwy
+INFO:root:Set first most common road to itself
+INFO:root:Pilgrim's Hwy
+INFO:root:Using list number: 1
+INFO:root:Pilgrim's Hwy is equal to Pilgrim's Hwy
+INFO:root:Using pair_id: 5533
+INFO:root:I- 95
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 95 is not equal to None
+INFO:root:Using pair_id: 5532
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:I- 95
+INFO:root:Using list number: 1
+CRITICAL:root:None is not equal to I- 95
+INFO:root:Using pair_id: 5537
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+INFO:root:None is equal to None
+INFO:root:Using pair_id: 5536
+INFO:root:None
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+INFO:root:None is equal to None
+INFO:root:Using pair_id: 10378
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 95
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to I- 95
+INFO:root:Using pair_id: 10379
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10376
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+INFO:root:I- 90 is equal to I- 90
+INFO:root:Using pair_id: 10377
+INFO:root:I- 90
+INFO:root:Set first most common road to itself
+INFO:root:None
+INFO:root:Using list number: 1
+CRITICAL:root:I- 90 is not equal to None
+INFO:root:Using pair_id: 5539
+INFO:root:State Hwy 24
+INFO:root:Set first most common road to itself
+INFO:root:I- 95
+INFO:root:Using list number: 1
+CRITICAL:root:State Hwy 24 is not equal to I- 95
+INFO:root:Using pair_id: 5538
+INFO:root:I- 95
+INFO:root:Set first most common road to itself
+INFO:root:State Rte 24
+INFO:root:Using list number: 1
+CRITICAL:root:I- 95 is not equal to State Rte 24
+INFO:root:Using pair_id: 10372
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:I- 495 is not equal to I- 90
+INFO:root:Using pair_id: 10373
+INFO:root:I- 495
+INFO:root:Set first most common road to itself
+INFO:root:I- 90
+INFO:root:Using list number: 1
+CRITICAL:root:I- 495 is not equal to I- 90
+INFO:root:62 out of 155 reached
+INFO:root:FINISHED - Nearest highway comparisons

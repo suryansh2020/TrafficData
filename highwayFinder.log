@@ -1,0 +1,315 @@
+INFO:root:Read json file into memory
+INFO:root:STARTED - Nearest highway comparisons
+INFO:root:Using pair_id: 10083
+INFO:root:Match found: set([u'Bedford Dr'])
+INFO:root:Using pair_id: 10215
+WARNING:root:Multiple matches found: set([u'I- 395', u'Oxford St S'])
+INFO:root:Using pair_id: 10214
+INFO:root:Match found: set([u'Bedford Dr'])
+INFO:root:Using pair_id: 10216
+WARNING:root:Multiple matches found: set([u'I- 90', u'I- 290', u'Southbridge St'])
+INFO:root:Using pair_id: 10109
+ERROR:root:No matches found: set([])
+INFO:root:Using pair_id: 10108
+INFO:root:Match found: set([u'I- 90'])
+INFO:root:Using pair_id: 5508
+WARNING:root:Multiple matches found: set([u'Washburn St', u'Howell St', u'Von Hillern St', u'Dorchester Ave'])
+INFO:root:Using pair_id: 5509
+WARNING:root:Multiple matches found: set([None, u'Leverett Con'])
+INFO:root:Using pair_id: 5506
+WARNING:root:Multiple matches found: set([u'Washburn St', u'Howell St', u'Von Hillern St', u'Dorchester Ave'])
+INFO:root:Using pair_id: 5507
+WARNING:root:Multiple matches found: set([u'I- 93', u'Washburn St', u'Howell St', u'Von Hillern St', u'Dorchester Ave'])
+INFO:root:Using pair_id: 5504
+WARNING:root:Multiple matches found: set([u'Forbes Rd', u'I- 93'])
+INFO:root:Using pair_id: 5505
+WARNING:root:Multiple matches found: set([u'Forbes Rd', None, u'I- 93'])
+INFO:root:Using pair_id: 5502
+INFO:root:Match found: set([u'Forbes Rd'])
+INFO:root:Using pair_id: 5503
+WARNING:root:Multiple matches found: set([u'Forbes Rd', u'I- 93'])
+INFO:root:Using pair_id: 5500
+WARNING:root:Multiple matches found: set([None, u'I- 93 Frontage Rd', u'I- 93 Nb Hov Lane', u'I- 93 Sb Hov Lane'])
+INFO:root:Using pair_id: 5501
+INFO:root:Match found: set([u'Forbes Rd'])
+INFO:root:Using pair_id: 10185
+WARNING:root:Multiple matches found: set([None, u'Pinehills Dr'])
+INFO:root:Using pair_id: 5587
+WARNING:root:Multiple matches found: set([u'Lindberg Ave', u'Danton Dr'])
+INFO:root:Using pair_id: 5584
+INFO:root:Match found: set([u'Woodhill Rd'])
+INFO:root:Using pair_id: 10186
+WARNING:root:Multiple matches found: set([u'Owl Swamp Rd', u'Duck Plain Rd'])
+INFO:root:Using pair_id: 10181
+WARNING:root:Multiple matches found: set([None, u'Brewster Rd', u'Dillingham Way', u'Malvern Ln'])
+INFO:root:Using pair_id: 10180
+INFO:root:Match found: set([u'Lone St'])
+INFO:root:Using pair_id: 5580
+WARNING:root:Multiple matches found: set([None, u'I- 93'])
+INFO:root:Using pair_id: 5581
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'Dragon Ct', u'Florence Ter'])
+INFO:root:Using pair_id: 10189
+ERROR:root:No matches found: set([])
+INFO:root:Using pair_id: 10188
+ERROR:root:No matches found: set([])
+INFO:root:Using pair_id: 5588
+INFO:root:Match found: set([None])
+INFO:root:Using pair_id: 10356
+WARNING:root:Multiple matches found: set([u'Lincoln St', u'Franklin St', u'Adamson St', u'Alcott St'])
+INFO:root:Using pair_id: 10357
+WARNING:root:Multiple matches found: set([None, u'Washington St'])
+INFO:root:Using pair_id: 10358
+WARNING:root:Multiple matches found: set([u'I- 90', u'Lincoln St', u'Franklin St', u'Adamson St', u'Alcott St'])
+INFO:root:Using pair_id: 10359
+WARNING:root:Multiple matches found: set([u'I- 90', u'Lincoln St', u'Franklin St', u'Adamson St', u'Alcott St'])
+INFO:root:Using pair_id: 5511
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'Dragon Ct', u'Florence Ter'])
+INFO:root:Using pair_id: 5510
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'Dragon Ct', u'Florence Ter'])
+INFO:root:Using pair_id: 10110
+WARNING:root:Multiple matches found: set([u'Saddle Hill Rd', u'Huckleberry Rd'])
+INFO:root:Using pair_id: 10192
+INFO:root:Match found: set([u"Pilgrim's Hwy"])
+INFO:root:Using pair_id: 10193
+INFO:root:Match found: set([u"Pilgrim's Hwy"])
+INFO:root:Using pair_id: 10190
+INFO:root:Match found: set([u'Middle St'])
+INFO:root:Using pair_id: 10213
+WARNING:root:Multiple matches found: set([u'I- 90', None, u'Bryn Mawr Ave'])
+INFO:root:Using pair_id: 10105
+INFO:root:Match found: set([u'I- 90'])
+INFO:root:Using pair_id: 9650
+WARNING:root:Multiple matches found: set([u'Wesson Ave', u'I- 93', u'Thurston Ave'])
+INFO:root:Using pair_id: 5498
+INFO:root:Match found: set([u'Leverett Con'])
+INFO:root:Using pair_id: 5499
+INFO:root:Match found: set([u'Leverett Con'])
+INFO:root:Using pair_id: 5494
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'Dragon Ct', u'Florence Ter'])
+INFO:root:Using pair_id: 5495
+WARNING:root:Multiple matches found: set([None, u'Leverett Con'])
+INFO:root:Using pair_id: 5496
+WARNING:root:Multiple matches found: set([None, u'Leverett Con', u'I- 93'])
+INFO:root:Using pair_id: 5497
+WARNING:root:Multiple matches found: set([None, u'Leverett Con', u'I- 93'])
+INFO:root:Using pair_id: 5490
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'Dragon Ct', u'Florence Ter'])
+INFO:root:Using pair_id: 5491
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'Dragon Ct', u'Florence Ter'])
+INFO:root:Using pair_id: 5492
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'I- 93', u'Florence Ter', u'Dragon Ct'])
+INFO:root:Using pair_id: 5493
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'I- 93', u'Florence Ter', u'Dragon Ct'])
+INFO:root:Using pair_id: 5568
+WARNING:root:Multiple matches found: set([u'Parker Rd', u'Putnam Ave', u'Griffen Dr'])
+INFO:root:Using pair_id: 5569
+WARNING:root:Multiple matches found: set([u'Beacon St', u'Lowell St', u'Newbridge Ave', u'Dover Dr'])
+INFO:root:Using pair_id: 5564
+WARNING:root:Multiple matches found: set([u'Parker Rd', u'Griffen Dr', u'I- 95', u'Putnam Ave'])
+INFO:root:Using pair_id: 5565
+WARNING:root:Multiple matches found: set([None, u'I- 93', u'Eugene Dr'])
+INFO:root:Using pair_id: 5566
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'I- 93', u'Florence Ter', u'Dragon Ct'])
+INFO:root:Using pair_id: 5567
+WARNING:root:Multiple matches found: set([u'Beacon St', u'Lowell St', u'I- 95', u'Dover Dr', u'Newbridge Ave'])
+INFO:root:Using pair_id: 5560
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'Dragon Ct', u'Florence Ter'])
+INFO:root:Using pair_id: 5561
+WARNING:root:Multiple matches found: set([None, u'Eugene Dr'])
+INFO:root:Using pair_id: 5562
+WARNING:root:Multiple matches found: set([u'Beacon St', u'Lowell St', u'I- 95', u'Dover Dr', u'Newbridge Ave'])
+INFO:root:Using pair_id: 5563
+WARNING:root:Multiple matches found: set([None, u'I- 93', u'Eugene Dr'])
+INFO:root:Using pair_id: 10184
+WARNING:root:Multiple matches found: set([None, u'Church Ln', u'Scotch Pine Rd'])
+INFO:root:Using pair_id: 10182
+INFO:root:Match found: set([u'Orense St'])
+INFO:root:Using pair_id: 10187
+INFO:root:Match found: set([u'Elm St'])
+INFO:root:Using pair_id: 9649
+WARNING:root:Multiple matches found: set([u'Wesson Ave', u'Thurston Ave'])
+INFO:root:Using pair_id: 9648
+INFO:root:Match found: set([u'Forbes Rd'])
+INFO:root:Using pair_id: 9647
+WARNING:root:Multiple matches found: set([u'Wesson Ave', u'Thurston Ave'])
+INFO:root:Using pair_id: 9646
+ERROR:root:No matches found: set([])
+INFO:root:Using pair_id: 5583
+INFO:root:Match found: set([u'Noel Rd'])
+INFO:root:Using pair_id: 10183
+INFO:root:Match found: set([u'Fairview Ln'])
+INFO:root:Using pair_id: 5579
+WARNING:root:Multiple matches found: set([None, u'Andover St', u'I- 93', u'Salem St'])
+INFO:root:Using pair_id: 5578
+WARNING:root:Multiple matches found: set([u'Noel Rd', u'I- 495'])
+INFO:root:Using pair_id: 5577
+WARNING:root:Multiple matches found: set([None, u'Andover St', u'I- 93', u'Salem St'])
+INFO:root:Using pair_id: 5575
+WARNING:root:Multiple matches found: set([u'Andover St', u'Salem St'])
+INFO:root:Using pair_id: 5574
+ERROR:root:No matches found: set([])
+INFO:root:Using pair_id: 5573
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'Dragon Ct', u'Florence Ter'])
+INFO:root:Using pair_id: 5572
+WARNING:root:Multiple matches found: set([None, u'Andover St', u'Salem St'])
+INFO:root:Using pair_id: 5571
+WARNING:root:Multiple matches found: set([u'Parker Rd', u'Griffen Dr', u'I- 95', u'Putnam Ave'])
+INFO:root:Using pair_id: 5570
+WARNING:root:Multiple matches found: set([u'Jere Rd', u'I- 93', u'Florence Ter', u'Dragon Ct'])
+INFO:root:Using pair_id: 10387
+INFO:root:Match found: set([u'I- 495'])
+INFO:root:Using pair_id: 10386
+INFO:root:Match found: set([u'Staples Dr'])
+INFO:root:Using pair_id: 10385
+INFO:root:Match found: set([u'Sealtest'])
+INFO:root:Using pair_id: 10384
+WARNING:root:Multiple matches found: set([u'I- 90', u'Winter St'])
+INFO:root:Using pair_id: 10383
+WARNING:root:Multiple matches found: set([u'I- 90', u'Winter St'])
+INFO:root:Using pair_id: 10382
+INFO:root:Match found: set([u'Winter St'])
+INFO:root:Using pair_id: 10381
+INFO:root:Match found: set([u'I- 95'])
+INFO:root:Using pair_id: 10380
+WARNING:root:Multiple matches found: set([u'River Rd', u'I- 95', u'Norumbega Rd'])
+INFO:root:Using pair_id: 10374
+WARNING:root:Multiple matches found: set([None, u'Pennsylvania Ave'])
+INFO:root:Using pair_id: 10389
+ERROR:root:No matches found: set([])
+INFO:root:Using pair_id: 10388
+WARNING:root:Multiple matches found: set([u'Saddle Hill Rd', u'Huckleberry Rd', u'I- 495'])
+INFO:root:Using pair_id: 5548
+INFO:root:Match found: set([u'I- 93'])
+INFO:root:Using pair_id: 10375
+INFO:root:Match found: set([u'Commonwealth Rd'])
+INFO:root:Using pair_id: 5542
+WARNING:root:Multiple matches found: set([u'Forbes Rd', None, u'I- 93'])
+INFO:root:Using pair_id: 5543
+INFO:root:Match found: set([u'State Rte 24'])
+INFO:root:Using pair_id: 5540
+WARNING:root:Multiple matches found: set([u'Forbes Rd', u'I- 93'])
+INFO:root:Using pair_id: 5541
+WARNING:root:Multiple matches found: set([u'Flintlock Ln', u'Vincent Rd', u'I- 95', u'Blue Hill Dr'])
+INFO:root:Using pair_id: 5546
+ERROR:root:No matches found: set([])
+INFO:root:Using pair_id: 5547
+INFO:root:Match found: set([u'Forbes Rd'])
+INFO:root:Using pair_id: 5545
+WARNING:root:Multiple matches found: set([u'Forbes Rd', u'I- 93'])
+INFO:root:Using pair_id: 9502
+WARNING:root:Multiple matches found: set([u'Flintlock Ln', u'Vincent Rd', u'I- 95', u'Blue Hill Dr'])
+INFO:root:Using pair_id: 9503
+INFO:root:Match found: set([u'I- 93'])
+INFO:root:Using pair_id: 9500
+INFO:root:Match found: set([u'I- 95'])
+INFO:root:Using pair_id: 9501
+INFO:root:Match found: set([u'I- 93'])
+INFO:root:Using pair_id: 9506
+INFO:root:Match found: set([u'Forbes Rd'])
+INFO:root:Using pair_id: 9507
+ERROR:root:No matches found: set([])
+INFO:root:Using pair_id: 9504
+INFO:root:Match found: set([u'State Rte 24'])
+INFO:root:Using pair_id: 9505
+WARNING:root:Multiple matches found: set([None, u'I- 93'])
+INFO:root:Using pair_id: 5555
+WARNING:root:Multiple matches found: set([u'I- 93 Frontage Rd', u'I- 93 Nb Hov Lane', u'I- 93 Sb Hov Lane'])
+INFO:root:Using pair_id: 5554
+INFO:root:Match found: set([u'Leverett Con'])
+INFO:root:Using pair_id: 5557
+INFO:root:Match found: set([u'Leverett Con'])
+INFO:root:Using pair_id: 5556
+WARNING:root:Multiple matches found: set([None, u'Mystic Valley Pkwy'])
+INFO:root:Using pair_id: 5551
+WARNING:root:Multiple matches found: set([None, u'Granite Ave'])
+INFO:root:Using pair_id: 5550
+WARNING:root:Multiple matches found: set([u'Washburn St', u'Howell St', u'Von Hillern St', u'Dorchester Ave'])
+INFO:root:Using pair_id: 5553
+WARNING:root:Multiple matches found: set([u'Washburn St', u'Howell St', u'Von Hillern St', u'Dorchester Ave'])
+INFO:root:Using pair_id: 5552
+WARNING:root:Multiple matches found: set([u'I- 93 Frontage Rd', u'I- 93 Nb Hov Lane', u'I- 93 Sb Hov Lane'])
+INFO:root:Using pair_id: 10240
+INFO:root:Match found: set([u'I- 495'])
+INFO:root:Using pair_id: 5559
+INFO:root:Match found: set([u'Mystic Valley Pkwy'])
+INFO:root:Using pair_id: 5558
+INFO:root:Match found: set([u'Eugene Dr'])
+INFO:root:Using pair_id: 10245
+INFO:root:Match found: set([None])
+INFO:root:Using pair_id: 10092
+WARNING:root:Multiple matches found: set([u'I- 395', u'Oxford St S'])
+INFO:root:Using pair_id: 10091
+WARNING:root:Multiple matches found: set([u'I- 290', u'Southbridge St'])
+INFO:root:Using pair_id: 10090
+WARNING:root:Multiple matches found: set([None, u'Bryn Mawr Ave'])
+INFO:root:Using pair_id: 10499
+WARNING:root:Multiple matches found: set([u'Lincoln St', u'Franklin St', u'Adamson St', u'Alcott St'])
+INFO:root:Using pair_id: 10498
+WARNING:root:Multiple matches found: set([None, u'Washington St'])
+INFO:root:Using pair_id: 10497
+WARNING:root:Multiple matches found: set([u'Corwood Dr', u'Ridgeway Rd'])
+INFO:root:Using pair_id: 10496
+WARNING:root:Multiple matches found: set([u'Soldiers Field Rd', u'Commonwealth Ave'])
+INFO:root:Using pair_id: 10525
+WARNING:root:Multiple matches found: set([u'Access Rd', u'I- 93 Frontage Rd'])
+INFO:root:Using pair_id: 10364
+WARNING:root:Multiple matches found: set([None, u'Leverett Con', u'I- 93'])
+INFO:root:Using pair_id: 10361
+ERROR:root:No matches found: set([])
+INFO:root:Using pair_id: 10239
+WARNING:root:Multiple matches found: set([u'Saddle Hill Rd', u'Huckleberry Rd', u'I- 495'])
+INFO:root:Using pair_id: 10363
+WARNING:root:Multiple matches found: set([u'I- 93', u'I- 93 Frontage Rd', u'I- 93 Nb Hov Lane', u'I- 93 Sb Hov Lane'])
+INFO:root:Using pair_id: 10362
+WARNING:root:Multiple matches found: set([u'I- 90', u'Lowell Ave', u'Austin St'])
+INFO:root:Using pair_id: 10238
+ERROR:root:No matches found: set([])
+INFO:root:Using pair_id: 10088
+WARNING:root:Multiple matches found: set([u'Walker Pond Rd', u'State Rte 49'])
+INFO:root:Using pair_id: 10089
+WARNING:root:Multiple matches found: set([None, u'I- 84', u'Main St'])
+INFO:root:Using pair_id: 10084
+INFO:root:Match found: set([u'I- 90'])
+INFO:root:Using pair_id: 10085
+WARNING:root:Multiple matches found: set([u'Westview Ave', None, u'Oak Pond Ave', u'Diane St', u'Rindge St'])
+INFO:root:Using pair_id: 10086
+INFO:root:Match found: set([u'Bryn Mawr Ave'])
+INFO:root:Using pair_id: 10087
+WARNING:root:Multiple matches found: set([u'I- 90', u'Bedford Dr'])
+INFO:root:Using pair_id: 10081
+WARNING:root:Multiple matches found: set([u'I- 90', u'Walker Pond Rd', u'State Rte 49'])
+INFO:root:Using pair_id: 10082
+WARNING:root:Multiple matches found: set([None, u'Waterman Rd', u'Bryn Mawr Ave'])
+INFO:root:Using pair_id: 10360
+WARNING:root:Multiple matches found: set([u'Soldiers Field Rd', u'Commonwealth Ave'])
+INFO:root:Using pair_id: 10178
+INFO:root:Match found: set([u'Middle St'])
+INFO:root:Using pair_id: 10179
+WARNING:root:Multiple matches found: set([u'Old Webster St', None])
+INFO:root:Using pair_id: 5533
+ERROR:root:No matches found: set([])
+INFO:root:Using pair_id: 5532
+WARNING:root:Multiple matches found: set([u'Flintlock Ln', u'Vincent Rd', u'Blue Hill Dr'])
+INFO:root:Using pair_id: 5537
+INFO:root:Match found: set([u'I- 95'])
+INFO:root:Using pair_id: 5536
+WARNING:root:Multiple matches found: set([u'Forbes Rd', u'I- 93'])
+INFO:root:Using pair_id: 10378
+WARNING:root:Multiple matches found: set([u'River Rd', u'I- 95', u'Norumbega Rd'])
+INFO:root:Using pair_id: 10379
+WARNING:root:Multiple matches found: set([u'Lowell Ave', u'Austin St'])
+INFO:root:Using pair_id: 10376
+WARNING:root:Multiple matches found: set([u'Corwood Dr', u'Ridgeway Rd'])
+INFO:root:Using pair_id: 10377
+INFO:root:Match found: set([u'I- 95'])
+INFO:root:Using pair_id: 5539
+WARNING:root:Multiple matches found: set([None, u'Flintlock Ln', u'Vincent Rd', u'I- 95', u'Blue Hill Dr'])
+INFO:root:Using pair_id: 5538
+INFO:root:Match found: set([u'State Rte 24'])
+INFO:root:Using pair_id: 10372
+WARNING:root:Multiple matches found: set([u'I- 90', None, u'Pennsylvania Ave'])
+INFO:root:Using pair_id: 10373
+WARNING:root:Multiple matches found: set([u'I- 90', None, u'Pennsylvania Ave'])
+INFO:root:45 matches out of 155 found
+INFO:root:99 partial matches out of 155 found
+INFO:root:COMPLETED - Nearest highway comparisons
