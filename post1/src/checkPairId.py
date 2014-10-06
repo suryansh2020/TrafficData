@@ -102,7 +102,8 @@ def parse_csv(datasource):
 def enable_log(log_name):
     """ Enable logs written to file """
     logging.basicConfig(filename= log_name + ".log",
-                        level=logging.DEBUG)
+                        level=logging.DEBUG,
+                        format='%(asctime)s %(levelname)s %(message)s')
 
 
 def check_input_type(data):
