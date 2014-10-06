@@ -136,5 +136,14 @@ class TestHighwayParser(object):
                  u'93 NB Viaduct before Ramp']
         nt.assert_equals(parse_and_pop(origin[0]),u'I-93')
         nt.assert_equals(parse_and_pop(origin[1]),u'93')
+        gremlins = [u'Rte. 3',u'Rt. 3',u'Rte. 495',
+                    u'Hungry muffins',u'I-495']
+        nt.assert_equals(parse_and_pop(gremlins[0]),u'Rte. 3')
+        nt.assert_equals(parse_and_pop(gremlins[1]),u'Rt. 3')
+        nt.assert_equals(parse_and_pop(gremlins[2]),u'Rte. 495')
+        nt.assert_equals(parse_and_pop(gremlins[3]),u'Hungry')
+        nt.assert_equals(parse_and_pop(gremlins[4]),u'I-495')
+        monsters = [u'Rte 3']
+        nt.assert_equals(parse_and_pop(monsters[0]),u'Rte 3')
 
         

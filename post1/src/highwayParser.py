@@ -11,10 +11,12 @@ the text.
 
 Here's the rules:
 1) Each string mentions the highway first.
+2) Some strings include a space in the highway name like Rt. 3
 
 That's it. Tokenizing each string based on spaces then popping off
 the first item in each queue.
 """
+import re
 import time
 import logging
 from collections import deque
@@ -37,7 +39,6 @@ def parse_tags(datasource, count):
              [count][u'Origin']
     destination = datasource[u'btdata'][u'TRAVELDATA'][u'PAIRDATA']\
              [count][u'Destination']
-    logging.info("Created tuple for (origin, destination)")
     return (origin, destination)
 
 # parse & pop
@@ -49,7 +50,13 @@ def parse_and_pop(string):
     Returns:
         str, name of a highway that's being described
     """
-    return deque(string.split(" ")).popleft()
+    pattern = re.compile("\w{2,3}[.] \d{3}?|\w{2,3}[.] \d{1,3}?|"+\
+                         "\w{2,3} \d{3}?|\w{2,3} \d{1,3}?|"+\
+                         "\w-\d{3}?|\w-\d{2}?|\d{2,3}?")
+    if pattern.search(string):
+        return pattern.search(string).group()
+    else:
+        return deque(string.split(" ")).popleft()
 
 def lookup_pairs(datasource):
     """ Create data structure from parsed pair_routes.xml """
