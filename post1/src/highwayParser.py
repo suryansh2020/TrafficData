@@ -13,12 +13,12 @@ Here's the rules:
 1) Each string mentions the highway first.
 2) Some strings include a space in the highway name like Rt. 3
 
-That's it. Tokenizing each string based on spaces then popping off
-the first item in each queue.
 """
+import io
 import re
 import time
 import logging
+import json
 from collections import deque
 
 from mapCoordinates import open_xml, parse_pair_id
@@ -95,7 +95,7 @@ def classify_pairs(datasource, whitelist):
     # timing
     start = time.time()
     # Classifications
-    intersectors = []
+    intersectors = {}
     disjointers = []
     others = []
     # Sorting
@@ -109,7 +109,7 @@ def classify_pairs(datasource, whitelist):
             #others.append(pair_id)
             #pass
         if origin == destination:
-            intersectors.append(pair_id)
+            intersectors[pair_id] = origin
 
         else:
             disjointers.append(pair_id)
@@ -122,10 +122,23 @@ def classify_pairs(datasource, whitelist):
     return (others, intersectors, disjointers)
     # need to add logging & tests
 
-def metrics(datasource, whitelist):
+def output(dictionary, name):
+    """ Outputs dictionary as text file containing json
+
+    Args:
+        dictionary: dict, key mapped to a value
+        name: name of text file that will be outputted containing json
+    Returns:
+       Writes a dictionary to a text file using json formatting.
+    """
+    logging.info("STARTED - Writing dictionary to a text file")
+    with io.open(name + ".txt", 'w', encoding="utf-8") as f:
+        f.write(unicode(json.dumps(dictionary, ensure_ascii=False)))
+    f.close()
+    logging.info("FINISHED - Writing dictionary to a text file")
+
+def metrics(others, intersectors, disjointers):
     """ Logging some metrics on the parse """
-    others, intersectors, \
-        disjointers = classify_pairs(datasource, whitelist)
     logging.info("Others: "+str(len(others)))
     logging.info("Intersectors: "+str(len(intersectors)))
     logging.info("Disjointers: "+str(len(disjointers)))
@@ -134,7 +147,12 @@ def metrics(datasource, whitelist):
 
 def main():
     logging.info("START - Beginning the parse")
-    metrics(lookup_pairs(open_xml()), whitelist())
+    # return values
+    others, intersectors, \
+        disjointers = classify_pairs(lookup_pairs(open_xml()),
+                                     whitelist())
+    output(intersectors, "intersectors")
+    metrics(others, intersectors, disjointers)
 
 if __name__ == "__main__":
     enable_log("highwayParser")

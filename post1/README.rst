@@ -111,17 +111,26 @@ Route
      first. Instead of the Google API, we're going to use geonames.org
      <http://api.geonames.org/findNearbyStreets?> .
 
-3) Match road names to existing description
+3) Match road names to existing description **Done**
 
    - Both the API and the descriptions given in pair_definitions.csv contain
      incomplete information. Let's take what we can from both & try to fill
      in the blanks.
 
-4) Format road names
+   - It turns out that the reverse geocoding api is too noisy to be
+     of much help here. We can either narrow the scope of our analysis
+     or expand the scope and introduce unreliable data. Parsing the
+     'Origin' and 'Destination' xml tags with regex ended up being a
+     better idea.
+
+4) Format road names **Done**
    
    - We want to return a list of tuples; (pair_id, road_name). Google
      may or may not format road names how you would like so just clean
      it up if necessary.
+
+   - Wrote dictionary to file as json where pair_id is mapped to road
+     name. "intersectors.txt"
 
 Time
 ----
@@ -131,7 +140,7 @@ pass
 Speed
 -----
 
-pass
+
 
 Direction
 ---------
