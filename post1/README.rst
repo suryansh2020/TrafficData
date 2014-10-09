@@ -140,6 +140,9 @@ pass
 Speed
 -----
 
+1) Figure out how to convert to mph
+
+
 
 
 Direction
